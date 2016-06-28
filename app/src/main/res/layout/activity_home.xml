@@ -10,23 +10,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.helpmeson.HomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Hi Nimit, "
-        android:id="@+id/textView"
-        android:textColor="#ffffff"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton"
         android:background="@drawable/askforhelp"
-        android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="39dp" />
