@@ -17,13 +17,18 @@ public class MainActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(sp.getBoolean("first",false)){
+                if(sp.getBoolean("first",false) && sp.getBoolean("second",false)){
                     Intent intent=new Intent(MainActivity.this,HomeActivity.class);
                     startActivity(intent);
                     finish();
                 }
-                else{
+                else if(sp.getBoolean("first",false) && !sp.getBoolean("second",false)){
                     Intent intent=new Intent(MainActivity.this,AddDetails.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else {
+                    Intent intent=new Intent(MainActivity.this,FirstScreen.class);
                     startActivity(intent);
                     finish();
                 }

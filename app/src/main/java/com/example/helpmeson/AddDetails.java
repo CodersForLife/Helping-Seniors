@@ -12,40 +12,43 @@ import android.widget.Toast;
 
 public class AddDetails extends AppCompatActivity {
 
-    public EditText fname,lname,pnumber;
-    String fn=null,ln=null,pn=null;
+    public EditText name,city,rnumber,address;
+    String n=null,cty=null,rn=null,add=null;
     Button done;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_details);
 
-        fname=(EditText)findViewById(R.id.fname);
-        fname.requestFocus();
+        name=(EditText)findViewById(R.id.name);
+        name.requestFocus();
 
-        lname=(EditText)findViewById(R.id.lname);
+        city=(EditText)findViewById(R.id.city);
      //   lname.requestFocus();
 
-        pnumber=(EditText)findViewById(R.id.pnumber);
+        rnumber=(EditText)findViewById(R.id.rnumber);
+        address=(EditText)findViewById(R.id.address);
 
        // pnumber.requestFocus();
         done=(Button)findViewById(R.id.done);
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fn=fname.getText().toString();
-                ln=lname.getText().toString();
-                pn=pnumber.getText().toString();
+                n=name.getText().toString();
+                cty=city.getText().toString();
+                rn=rnumber.getText().toString();
+                add=address.getText().toString();
 
-                if(fn.length()>=1 && ln.length()>=1 && pn.length()>=1)
+                if(n.length()>=1 && cty.length()>=1 && rn.length()>=1 && add.length()>=1)
                 {
                    // SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                    SharedPreferences preferences =getSharedPreferences("Pref",MODE_PRIVATE);
+                    SharedPreferences preferences =getSharedPreferences("Pref",MODE_APPEND);
                             SharedPreferences.Editor editor = preferences.edit();
-                    editor.putBoolean("first",true);
-                    editor.putString("first_name",fn);
-                    editor.putString("last_name",ln);
-                    editor.putString("phone_number",pn);
+                    editor.putBoolean("second",true);
+                    editor.putString("name",n);
+                    editor.putString("city",cty);
+                    editor.putString("reference_number",rn);
+                    editor.putString("address",add);
                     editor.apply();
                     editor.commit();
                     Intent intent=new Intent(getApplicationContext(),HomeActivity.class);

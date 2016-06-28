@@ -8,29 +8,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.25"/>
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/fname"
+        android:id="@+id/name"
         android:maxLines="1"
         android:inputType="textPersonName"
         android:ems="1"
         android:gravity="center"
         android:layout_gravity="center"
-        android:hint="First Name"
+        android:hint="Name"
         android:layout_weight="0.25" />
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:id="@+id/lname"
+        android:id="@+id/city"
         android:maxLines="1"
         android:ems="1"
         android:gravity="center"
-        android:hint="Last Name"
+        android:hint="City"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.25" />
 
@@ -38,13 +38,24 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="Mobile Number"
+        android:hint="Reference Number"
         android:inputType="phone"
         android:lines="1"
         android:ems="10"
-        android:id="@+id/pnumber"
+        android:id="@+id/rnumber"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.25" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/address"
+        android:inputType="textMultiLine"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.25"
+        android:hint="Address"
+        android:lines="3"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
