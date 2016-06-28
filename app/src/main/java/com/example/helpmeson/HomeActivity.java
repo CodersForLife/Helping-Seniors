@@ -10,6 +10,7 @@ import android.widget.Button;
 public class HomeActivity extends AppCompatActivity {
 
     Button btn1;
+    Button btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,18 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:1234"));
+                intent.setData(Uri.parse("tel:+9112933553"));
                 startActivity(intent);
+            }
+        });
+
+        btn2=(Button) findViewById(R.id.button);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto","info@helpmeson.in", null));
+                startActivity(Intent.createChooser(intent, "Choose an Email client :"));
             }
         });
     }
