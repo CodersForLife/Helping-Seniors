@@ -17,10 +17,11 @@ public class MainActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(/*sp.contains("first")*/true){
+                if(sp.contains("first")){
                     Intent intent=new Intent(MainActivity.this,HomeActivity.class);
                     startActivity(intent);
                     finish();
+
                 }
                 else{
                     Intent intent=new Intent(MainActivity.this,AddDetails.class);
