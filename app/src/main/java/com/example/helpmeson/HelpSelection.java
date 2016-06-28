@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class HelpSelection extends AppCompatActivity implements View.OnClickListener{
+    String[] clicked;
     ImageView jobs,food,health,clothes,emergency,shelter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
