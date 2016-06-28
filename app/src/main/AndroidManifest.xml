@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".AddDetails" />
-        <activity android:name=".FirstScreen"></activity>
+        <activity android:name=".FirstScreen" />
+        <activity android:name=".HelpSelection"></activity>
     </application>
 
 </manifest>
