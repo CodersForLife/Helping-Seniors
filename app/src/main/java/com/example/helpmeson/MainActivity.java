@@ -17,13 +17,15 @@ public class MainActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(sp.contains("first")){
+                if(sp.getBoolean("first",false)){
                     Intent intent=new Intent(MainActivity.this,HomeActivity.class);
                     startActivity(intent);
+                    finish();
                 }
                 else{
                     Intent intent=new Intent(MainActivity.this,AddDetails.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         }, 2000);
