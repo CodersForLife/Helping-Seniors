@@ -51,7 +51,7 @@ public class AddDetails extends AppCompatActivity {
                     editor.putString("address",add);
                     editor.apply();
                     editor.commit();
-                    Intent intent=new Intent(getApplicationContext(),HomeActivity.class);
+                    Intent intent=new Intent(getApplicationContext(),HelpSelection.class);
                     startActivity(intent);
                     finish();
                 }

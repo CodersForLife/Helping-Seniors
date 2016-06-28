@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(sp.getBoolean("first",false) && sp.getBoolean("second",false)){
+                if(sp.getBoolean("first",false) && sp.getBoolean("second",false) && sp.getBoolean("third",false)){
                     Intent intent=new Intent(MainActivity.this,HomeActivity.class);
                     startActivity(intent);
                     finish();
@@ -25,6 +25,11 @@ public class MainActivity extends Activity {
                 else if(sp.getBoolean("first",false) && !sp.getBoolean("second",false)){
                     Intent intent=new Intent(MainActivity.this,AddDetails.class);
                     startActivity(intent);
+                    finish();
+                }
+                else if(sp.getBoolean("first",false) && sp.getBoolean("second",false) && !sp.getBoolean("third",false)){
+                    Intent j=new Intent(getApplicationContext(),HelpSelection.class);
+                    startActivity(j);
                     finish();
                 }
                 else {
