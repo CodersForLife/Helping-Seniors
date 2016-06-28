@@ -16,12 +16,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/jobs"
-            android:background="@drawable/JOBS"
+            android:background="@drawable/jobs"
             android:layout_weight="1"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/HEALTHCARE"
+            android:background="@drawable/healthcare"
             android:id="@+id/health_care"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/food"
-            android:background="@drawable/FOOD"
+            android:background="@drawable/food"
             android:layout_weight="1"/>
         <ImageView
             android:layout_width="match_parent"
