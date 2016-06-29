@@ -41,12 +41,53 @@ public class HelpSelection extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
     int k=v.getId();
         switch (k){
-            case R.id.jobs:jobs.setAlpha((float) 0.2);clicked[0]=1;
+            case R.id.jobs:
+                if(clicked[0]==0) {
+                    jobs.setAlpha((float) 0.2);
+                    clicked[0] = 1;
+                }
+                else{
+                jobs.setAlpha((float) 1.0);
+                clicked[0]=0;
+            }
                 break;
-            case R.id.food: food.setAlpha((float) 0.2);clicked[1]=1;break;
-            case R.id.health_care: health.setAlpha((float) 0.2);clicked[2]=1;break;
-            case R.id.clothes:clothes.setAlpha((float) 0.2);clicked[3]=1;break;
-            case R.id.emergency_money:emergency.setAlpha((float) 0.2);clicked[4]=1;break;
+            case R.id.food:
+                if(clicked[1]==0) {
+                    food.setAlpha((float) 0.2);
+                    clicked[1] = 1;
+                }
+                else{
+                    food.setAlpha((float) 1.0);
+                    clicked[1]=0;
+                };break;
+            case R.id.health_care:
+                if(clicked[2]==0) {
+                    health.setAlpha((float) 0.2);
+                    clicked[2] = 1;
+                }
+                else{
+                    health.setAlpha((float) 1.0);
+                    clicked[2]=0;
+                }
+                ;break;
+            case R.id.clothes:
+                if(clicked[3]==0) {
+                    clothes.setAlpha((float) 0.2);
+                    clicked[3] = 1;
+                }
+                else{
+                    clothes.setAlpha((float) 1.0);
+                    clicked[3]=0;
+                };break;
+            case R.id.emergency_money:
+                if(clicked[4]==0) {
+                    emergency.setAlpha((float) 0.2);
+                    clicked[4] = 1;
+                }
+                else{
+                    emergency.setAlpha((float) 1.0);
+                    clicked[4]=0;
+                };break;
             case R.id.nxt:
                 SharedPreferences preferences =getSharedPreferences("Pref",MODE_APPEND);
                 SharedPreferences.Editor editor = preferences.edit();

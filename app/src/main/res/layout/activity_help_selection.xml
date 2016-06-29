@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     android:orientation="vertical"
     android:weightSum="4"
     android:layout_width="match_parent"
@@ -15,10 +19,12 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:id="@+id/jobs"
             android:background="@drawable/jobs"
             android:layout_weight="1"/>
         <ImageView
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/healthcare"
@@ -34,12 +40,14 @@
         android:orientation="horizontal">
         <ImageView
             android:layout_width="match_parent"
+            android:layout_margin="5dp"
             android:layout_height="match_parent"
             android:id="@+id/food"
             android:background="@drawable/food"
             android:layout_weight="1"/>
         <ImageView
             android:layout_width="match_parent"
+            android:layout_margin="5dp"
             android:layout_height="match_parent"
             android:id="@+id/clothes"
             android:background="@drawable/clothes"
@@ -55,6 +63,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/cash"
             android:id="@+id/emergency_money"
@@ -66,6 +75,20 @@
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_weight="1">
+        <Button
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:id="@+id/nxt"
+            android:layout_width="match_parent"
+            android:text="Next"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+ <!--   <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -83,6 +106,7 @@
             android:text="Next"
             android:background="@color/colorPrimary"
             android:layout_weight="0.5"/>
-    </LinearLayout>
+    </LinearLayout>-->
 
 </LinearLayout>
+</ScrollView>
