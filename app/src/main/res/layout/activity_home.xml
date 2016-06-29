@@ -24,7 +24,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Call Us: +9112933553"
+        android:text="Call Us: +911204270411"
         android:id="@+id/button2"
         android:background="@color/colorPrimary"
         android:textColor="@color/white"
