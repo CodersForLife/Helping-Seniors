@@ -17,8 +17,10 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".AddDetails" />
-        <activity android:name=".FirstScreen" />
-        <activity android:name=".HelpSelection"></activity>
+        <activity android:name=".FirstScreen"
+            />
+        <activity android:name=".HelpSelection"
+            android:label="Type of Help"></activity>
     </application>
 
 </manifest>
