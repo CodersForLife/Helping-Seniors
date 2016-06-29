@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                         "mailto","info@helpmeson.in", null));
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Need Help");
                 startActivity(Intent.createChooser(intent, "Choose an Email client :"));
             }
         });
