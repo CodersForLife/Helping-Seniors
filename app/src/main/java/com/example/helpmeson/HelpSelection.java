@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -110,17 +111,19 @@ public class HelpSelection extends AppCompatActivity implements View.OnClickList
                 ;
                 break;
             case R.id.nxt:
-                SharedPreferences preferences = getSharedPreferences("Pref", MODE_APPEND);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putBoolean("third", true);
-                editor.apply();
-                editor.commit();
-
-                data_to_be_sent();
-
-                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(intent);
-                finish();
+                if(clicked[0]==1 ||clicked[1]==1 ||clicked[2]==1 ||clicked[3]==1 ||clicked[4]==1 ){
+                    SharedPreferences preferences = getSharedPreferences("Pref", MODE_APPEND);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean("third", true);
+                    editor.apply();
+                    editor.commit();
+                    data_to_be_sent();
+                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            else
+                Toast.makeText(getApplicationContext(),"Select type of help you need",Toast.LENGTH_SHORT).show();
                 break;
         }
     }
