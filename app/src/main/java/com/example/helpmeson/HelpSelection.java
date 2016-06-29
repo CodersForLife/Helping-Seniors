@@ -7,16 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 public class HelpSelection extends AppCompatActivity implements View.OnClickListener{
     int[] clicked;
     ImageView jobs,food,health,clothes,emergency,shelter;
+    //RelativeLayout jobs_rl;
     Button nxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help_selection);
         clicked=new int[6];
+       // jobs_rl=(RelativeLayout)findViewById(R.id.jobs_rl);
         jobs=(ImageView)findViewById(R.id.jobs);
         food=(ImageView)findViewById(R.id.food);
         health=(ImageView)findViewById(R.id.health_care);

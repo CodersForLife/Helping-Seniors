@@ -17,12 +17,14 @@ public class FirstScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_screen);
         mnumber=(EditText)findViewById(R.id.mnumber);
+       // mnumber.setText();
+        mnumber.append("+91-");
+//        mnumber.moveCursorToVisibleOffset();
         mnumber.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
                     String number=mnumber.getText().toString();
-
                     SharedPreferences preferences =getSharedPreferences("Pref",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean("first",true);
