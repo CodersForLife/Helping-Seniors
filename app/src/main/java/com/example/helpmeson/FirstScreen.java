@@ -1,8 +1,8 @@
 package com.example.helpmeson;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -10,7 +10,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class FirstScreen extends AppCompatActivity {
+public class FirstScreen extends Activity {
     EditText mnumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
