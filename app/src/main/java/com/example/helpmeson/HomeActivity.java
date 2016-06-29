@@ -42,7 +42,6 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
-
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -50,15 +49,12 @@ public class HomeActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.edit_detail) {
             Intent intent=new Intent(HomeActivity.this,FirstScreen.class);
             startActivity(intent);
             return true;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 }
