@@ -1,14 +1,15 @@
-package com.example.helpmeson;
+package com.helpmesonteam.helpmeson;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.android.helpmeson.R;
 
 public class FirstScreen extends Activity {
     EditText mnumber;
@@ -18,7 +19,7 @@ public class FirstScreen extends Activity {
         setContentView(R.layout.activity_first_screen);
         mnumber=(EditText)findViewById(R.id.mnumber);
        // mnumber.setText();
-        mnumber.append("+91-");
+        mnumber.append("+91");
 //        mnumber.moveCursorToVisibleOffset();
         mnumber.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

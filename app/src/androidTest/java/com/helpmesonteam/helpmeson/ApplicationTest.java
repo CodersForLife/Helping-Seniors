@@ -1,4 +1,4 @@
-package com.example.helpmeson;
+package com.helpmesonteam.helpmeson;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/edit_detail" android:title="Edit Detail"
         android:orderInCategory="100"  />
+    <item
+        android:id="@+id/sos"
+        android:title="SOS"
+        app:showAsAction="always"
+         >
+        <menu>
+            <item
+                android:id="@+id/ambulance"
+                android:title="Ambulance" />
+            <item
+                android:id="@+id/fire"
+                android:title="Fire" />
+            <item
+                android:id="@+id/police"
+                android:title="Police"/>
+            <item
+                android:id="@+id/helpmeson"
+                android:title="Helpmeson"/>
+        </menu>
+    </item>
 </menu>

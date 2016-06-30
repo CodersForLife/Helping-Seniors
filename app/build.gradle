@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        applicationId "com.example.helpmeson"
+        applicationId "com.helpmesonteam.helpmeson"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
