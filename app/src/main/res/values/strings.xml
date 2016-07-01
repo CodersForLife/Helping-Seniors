@@ -1,6 +1,20 @@
 <resources>
     <string name="app_name">Helpmeson</string>
 
+    <string-array name="cities_list">
+        <item>Ahmedabad</item>
+        <item>Aizawl</item>
+        <item>Amritsar</item>
+        <item>Balaghat</item>
+        <item>Delhi</item>
+        <item>Faridabad</item>
+        <item>Gandhinagar</item>
+        <item>Indore</item>
+        <item>Mumbai</item>
+        <item>Rajkot</item>
+    </string-array>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="openDrawer">Open Drawer</string>

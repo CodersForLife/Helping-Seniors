@@ -5,26 +5,53 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.helpmeson.R;
 
 public class AddDetails extends AppCompatActivity {
 
-    public EditText name,city,rnumber,address;
-    String n=null,cty=null,rn=null,add=null;
+    public EditText name,rnumber,address;
+    String n=null,cty,rn=null,add=null;
+    String[] cities;
+    Spinner spinner;
     Button done;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_details);
 
+        cities = getResources().getStringArray(R.array.cities_list);
+        spinner = (Spinner) findViewById(R.id.city_spinner);
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, cities);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dataAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                cty = cities[spinner.getSelectedItemPosition()];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+
+            }
+        });
+
         name=(EditText)findViewById(R.id.name);
         name.requestFocus();
 
-        city=(EditText)findViewById(R.id.city);
+     //   city=(EditText)findViewById(R.id.city);
      //   lname.requestFocus();
 
         rnumber=(EditText)findViewById(R.id.rnumber);
@@ -36,7 +63,7 @@ public class AddDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 n=name.getText().toString();
-                cty=city.getText().toString();
+      //          cty=city.getText().toString();
                 rn=rnumber.getText().toString();
                 add=address.getText().toString();
 
