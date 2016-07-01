@@ -3,28 +3,33 @@ package com.helpmesonteam.helpmeson;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import android.support.design.widget.NavigationView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.android.helpmeson.R;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     private DrawerLayout homeDrawerLayout;
     private NavigationView homeNavigationView;
     private View homeNavigationHeaderView;
     private Toolbar homeTopToolbar;
     private FragmentTransaction fragmentTransaction;
+    private LinearLayout about,story,call,mail,rate;
     Button btn1;
     Button btn2;
 
@@ -40,7 +45,30 @@ public class HomeActivity extends AppCompatActivity {
         homeDrawerLayout = (DrawerLayout) findViewById(R.id.dl_home_screen_drawer_layout);
         homeTopToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(homeTopToolbar);
-
+        about= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.abt_hlp);
+        story= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.top_sto);
+        call= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.call);
+        mail= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.mail);
+        rate= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.rate);
+        final SharedPreferences sp=getSharedPreferences("Pref",MODE_PRIVATE);
+        Log.e("kk",sp.getBoolean("fourth",true)+"");
+        if (sp.getBoolean("fourth",true)){
+            helpDialogFragment dialog=new helpDialogFragment();
+            FragmentManager manager = getFragmentManager();
+            dialog.show(manager,"fdfd");
+            SharedPreferences preferences = getSharedPreferences("Pref", MODE_APPEND);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("fourth", false);
+            editor.apply();
+            editor.commit();
+        }
+        else{
+        }
+        about.setOnClickListener(this);
+        story.setOnClickListener(this);
+        call.setOnClickListener(this);
+        mail.setOnClickListener(this);
+        rate.setOnClickListener(this);
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, homeDrawerLayout, homeTopToolbar, R.string.openDrawer, R.string.closeDrawer) {
             @Override
             public void onDrawerClosed(View drawerView) {
@@ -140,5 +168,24 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v == about){
+
+        }
+        else if(v == story){
+
+        }
+        else if(v == call){
+
+        }
+        else if(v == mail){
+
+        }
+        else if (v == rate){
+
+        }
     }
 }
