@@ -1,21 +1,30 @@
 package com.helpmesonteam.helpmeson;
 
-import android.Manifest;
+import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import android.support.design.widget.NavigationView;
 import android.view.View;
 import android.widget.Button;
 
 import com.android.helpmeson.R;
 
 public class HomeActivity extends AppCompatActivity {
-
+    private DrawerLayout homeDrawerLayout;
+    private NavigationView homeNavigationView;
+    private View homeNavigationHeaderView;
+    private Toolbar homeTopToolbar;
+    private FragmentTransaction fragmentTransaction;
     Button btn1;
     Button btn2;
 
@@ -23,14 +32,41 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fl_home_screen_frame_layout, new HomeFragment());
+        fragmentTransaction.commit();
+        homeNavigationView = (NavigationView) findViewById(R.id.nv_home_screen_navigation_view);
+        homeNavigationHeaderView = homeNavigationView.getHeaderView(0);
+        homeDrawerLayout = (DrawerLayout) findViewById(R.id.dl_home_screen_drawer_layout);
+        homeTopToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(homeTopToolbar);
 
-        btn1 = (Button) findViewById(R.id.button2);
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, homeDrawerLayout, homeTopToolbar, R.string.openDrawer, R.string.closeDrawer) {
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                // Code here will be triggered once the drawer closes as we dont want anything to happen so we leave this blank
+                super.onDrawerClosed(drawerView);
+            }
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                // Code here will be triggered once the drawer open as we dont want anything to happen so we leave this blank
+                super.onDrawerOpened(drawerView);
+            }
+        };
+        //Setting the actionbarToggle to drawer layout
+        homeDrawerLayout.setDrawerListener(actionBarDrawerToggle);
+        //calling sync state is necessary or else your hamburger icon wont show up
+        actionBarDrawerToggle.syncState();
+       /* btn1 = (Button) findViewById(R.id.button2);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
+              *//*  Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:+911204270411"));
-                startActivity(intent);
+                startActivity(intent);*//*
+                helpDialogFragment dialog=new helpDialogFragment();
+                FragmentManager manager = getFragmentManager();
+                dialog.show(manager,"fdfd");
             }
         });
 
@@ -43,7 +79,7 @@ public class HomeActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Need Help");
                 startActivity(Intent.createChooser(intent, "Choose an Email client :"));
             }
-        });
+        });*/
     }
 
     @Override

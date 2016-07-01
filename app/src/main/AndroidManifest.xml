@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.helpmesonteam.helpmeson.HomeActivity" />
+        <activity android:name="com.helpmesonteam.helpmeson.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name="com.helpmesonteam.helpmeson.AddDetails" />
         <activity android:name="com.helpmesonteam.helpmeson.FirstScreen"
             />
