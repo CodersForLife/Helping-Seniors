@@ -40,6 +40,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fl_home_screen_frame_layout, new HomeFragment());
         fragmentTransaction.commit();
+
         homeNavigationView = (NavigationView) findViewById(R.id.nv_home_screen_navigation_view);
         homeNavigationHeaderView = homeNavigationView.getHeaderView(0);
         homeDrawerLayout = (DrawerLayout) findViewById(R.id.dl_home_screen_drawer_layout);
