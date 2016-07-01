@@ -21,6 +21,7 @@ public class AddDetails extends AppCompatActivity {
     String[] cities;
     Spinner spinner;
     Button done;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
