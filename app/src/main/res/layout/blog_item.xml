@@ -1,8 +1,14 @@
-<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
     android:id="@+id/blog_card"
     android:layout_width="300dp"
     android:layout_margin="10dp"
+    android:layout_gravity="center"
     android:layout_height="200dp"
     card_view:cardElevation="10dp"
     card_view:cardCornerRadius="4dp">
@@ -50,3 +56,4 @@
                 android:layout_weight="1"/>
         </LinearLayout>
     </android.support.v7.widget.CardView>
+</LinearLayout>
