@@ -2,6 +2,7 @@ package com.helpmesonteam.helpmeson;
 
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -181,13 +182,30 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         else if(v == call){
-
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:+911204270411"));
+            startActivity(intent);
         }
         else if(v == mail){
-
+            Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto", "info@helpmeson.in", null));
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Need Help");
+            startActivity(Intent.createChooser(intent, "Choose an Email client :"));
         }
         else if (v == rate){
-
+            Uri uri = Uri.parse("market://details?id=" + getPackageName());
+            Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+            // To count with Play market backstack, After pressing back button,
+            // to taken back to our application, we need to add following flags to intent.
+            goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                    Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET |
+                    Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+            try {
+                startActivity(goToMarket);
+            } catch (ActivityNotFoundException e) {
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+            }
         }
     }
 }
