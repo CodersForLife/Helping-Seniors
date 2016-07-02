@@ -42,7 +42,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="Reference Number"
+        android:hint="Alternate Number"
         android:inputType="phone"
         android:lines="1"
         android:ems="10"

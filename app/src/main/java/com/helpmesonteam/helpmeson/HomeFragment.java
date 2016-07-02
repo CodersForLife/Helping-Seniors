@@ -1,17 +1,22 @@
 package com.helpmesonteam.helpmeson;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.android.helpmeson.R;
 
+import java.net.InetAddress;
 
 
 public class HomeFragment extends Fragment {
@@ -26,6 +31,8 @@ public class HomeFragment extends Fragment {
 
     RecyclerView blog_rv;
     LinearLayoutManager llm;
+    FloatingActionButton add_help;
+    TextView network_message;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -65,14 +72,38 @@ public class HomeFragment extends Fragment {
         String[] dataset={"STARTUP ADVICE","RESOURCES","NEWS","STORIES"};
         View v= inflater.inflate(R.layout.fragment_home, container, false);
         blog_rv=(RecyclerView) v.findViewById(R.id.blog_recycler_view);
+        add_help=(FloatingActionButton)v.findViewById(R.id.add_new_help);
+        network_message=(TextView)v.findViewById(R.id.connection_msg);
 
-        blog_rv.setHasFixedSize(true);
-        llm=new LinearLayoutManager(getActivity().getApplicationContext());
-        blog_rv.setLayoutManager(llm);
-        MyAdapter madapter=new MyAdapter(dataset);
-        blog_rv.setAdapter(madapter);
 
+        
+       if( isInternetAvailable(getActivity().getApplicationContext()))
+       {
+           blog_rv.setHasFixedSize(true);
+           llm=new LinearLayoutManager(getActivity().getApplicationContext());
+           blog_rv.setLayoutManager(llm);
+           MyAdapter madapter=new MyAdapter(dataset);
+           blog_rv.setAdapter(madapter);
+       }
+
+        else {
+           network_message.setVisibility(View.VISIBLE);
+           add_help.setVisibility(View.GONE);
+       }
+
+        add_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getActivity().getApplicationContext(),AddDetails.class);
+                startActivity(i);
+            }
+        });
         return v;
+    }
+
+    private boolean isInternetAvailable(Context context) {
+        final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
+        return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
     }
 }
     // TODO: Rename method, update argument and hook method into UI event
