@@ -51,6 +51,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         call= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.call);
         mail= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.mail);
         rate= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.rate);
+
         final SharedPreferences sp=getSharedPreferences("Pref",MODE_PRIVATE);
         Log.e("kk",sp.getBoolean("fourth",true)+"");
         if (sp.getBoolean("fourth",true)){
@@ -131,7 +132,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 return true;
             case R.id.ambulance:
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:102"));
                 try {
                     startActivity(callIntent);
@@ -140,7 +141,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 return true;
             case R.id.fire:
-                Intent callIntent2 = new Intent(Intent.ACTION_CALL);
+                Intent callIntent2 = new Intent(Intent.ACTION_DIAL);
                 callIntent2.setData(Uri.parse("tel:101"));
                 try {
                     startActivity(callIntent2);
@@ -150,7 +151,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 return true;
 
             case R.id.police:
-                Intent callIntent3 = new Intent(Intent.ACTION_CALL);
+                Intent callIntent3 = new Intent(Intent.ACTION_DIAL);
                 callIntent3.setData(Uri.parse("tel:100"));
                 try {
                     startActivity(callIntent3);
@@ -159,7 +160,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 return true;
             case R.id.helpmeson:
-                Intent callIntent4 = new Intent(Intent.ACTION_CALL);
+                Intent callIntent4 = new Intent(Intent.ACTION_DIAL);
                 callIntent4.setData(Uri.parse("tel:+911204270411"));
                 try {
                     startActivity(callIntent4);
