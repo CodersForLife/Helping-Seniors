@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0068b2</color>
+    <color name="colorPrimaryDark">#0068b2</color>
+    <color name="colorAccent">#0068B2</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="app_divider_color">#D2D5D7</color>
+    <color name="transparen_black">#4c000000</color>
+
+    <color name="transparen">#04000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="spinnerBg">#edeff1</color>
+    <color name="actionbar_bg">#0068b2</color>
+    <color name="light_white">#f5f8fc</color>
+    <color name="app_theme_color">#FF00fd</color>
+    <color name="app_status_bar_color">#0068b2</color>
+    <color name="button_color">#0068b2</color>
+
+
+</resources>

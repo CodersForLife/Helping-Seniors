@@ -1,0 +1,37 @@
+{
+  "api": {
+    "apiservice": {
+      "serviceUrl": "http://192.168.1.8/oru_services/",
+      "apiEnpoint":"api/v1/",
+      "appConfig":"/appConfig.php",
+      "imageEndPoint": "images/",
+      "login": "login",
+      "register": "register",
+      "servicelist":"service.php/serviceslist",
+      "createcustomerservicerequest":"service.php/createcustomerservicerequest",
+      "customerservicerequirementlist":"service.php/customerservicerequest/",
+      "viewcustomerproposal":"service.php/viewcustomerproposal/",
+      "acceptproposal":"service.php/acceptservicerequestproposal",
+      "customeraddress":"profile.php/customeraddress",
+      "customergender":"profile.php/customergender",
+      "customermobileno":"profile.php/customermobileno",
+      "update_profile_image":"profile.php/customerprofilepic",
+      "customername":"profile.php/customername",
+      "completecustomerrequest":"service.php/completecustomerrequest",
+      "cancelcustomerrequest":"service.php/cancelcustomerrequest",
+      "viewpincodelist":"service.php/viewpincodelist",
+      "viewnotification":"notification.php/viewnotification/"
+    },
+    "apikey": {
+      "access_token" :  "72a57f585e0b42cf8e66930c4318d006",
+      "user_agent" : "AmericanEagle-Android",
+      "newrelic": "AA4e79e4ace100a38bc85a36274eb8bfe633bd33bc",
+      "card_io": "8b41693a251c4a639e55c58cb1a53601"
+    },
+    "googleAPIService": {
+      "default_navigation": "https://maps.google.com/maps?saddr=",
+      "geocoder_latlng": "https://maps.googleapis.com/maps/api/geocode/json?latlng=",
+      "getcoder_address":"https://maps.googleapis.com/maps/api/geocode/json?address="
+    }
+  }
+}
