@@ -5,7 +5,7 @@ package com.helpmesonteam.helpmeson.data;
  */
 public class Wills {
     public  String[] will= new String[1];
-    void Wills(){
+    public Wills(){
         will[0]="What is a will?\n" +
                 "A will is a highly confidential document, the aim of which is to provide the person with a legal platform to distribute his/her assets after his/her demise.\n" +
                 "A will can be made on stamp paper, and it is advisable to get it registered at the office of the sub-registrar.\n" +

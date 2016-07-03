@@ -5,7 +5,7 @@ package com.helpmesonteam.helpmeson.data;
  */
 public class Heathdata {
     public String[] health=new String[12];
-    void Healthdata(){
+    public Heathdata(){
         health[0]="Arthritis, in simple terms, refers to pain/swelling in the joints. Rheumatism is aches/pains/stiffness in the joints, bones or soft tissue. Arthritis is one form of Rheumatism.Arthritis may vary in type or intensity from person to person. There are over 100 types of arthritis. The treatment for one form of it may not necessarily be advisable for another form. Medicines for arthritis should never be taken without consulting a doctor. Arthritis is not hereditary.\n" +
                 "\n" +
                 "Common types of Arthritis\n" +

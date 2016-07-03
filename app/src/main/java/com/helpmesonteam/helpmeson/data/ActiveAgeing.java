@@ -5,7 +5,7 @@ package com.helpmesonteam.helpmeson.data;
  */
 public class ActiveAgeing {
     String[] active=new String[4];
-    ActiveAgeing() {
+    public ActiveAgeing() {
         active[0] = "According to projections made by the UN Population Division, there will be approximately two elderly persons for every child in the world by the year 2050.\n" +
                 "This implies that the aged 60 and above, which currently constitute less than 20% of the population will account for 32% of the population by 2050.\n" +
                 "Today, the biggest enemies of the geriatric population include solitude, loneliness, isolation, neglect and a sense of not being wanted.\n" +

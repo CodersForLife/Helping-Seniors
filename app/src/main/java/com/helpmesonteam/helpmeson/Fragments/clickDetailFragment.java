@@ -3,6 +3,13 @@ package com.helpmesonteam.helpmeson.Fragments;
 import android.content.Context;
 import android.net.Uri;
 import com.android.helpmeson.R;
+import com.helpmesonteam.helpmeson.data.ActiveAgeing;
+import com.helpmesonteam.helpmeson.data.ElderAbuse;
+import com.helpmesonteam.helpmeson.data.FinancialPlanning;
+import com.helpmesonteam.helpmeson.data.Heathdata;
+import com.helpmesonteam.helpmeson.data.Rights;
+import com.helpmesonteam.helpmeson.data.Wills;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -130,22 +137,59 @@ public class clickDetailFragment extends Fragment {
         }
         listview_issue.setAdapter(adapter);
         issue_category.setBackgroundResource(img_path);
-
+        final Bundle bundle=new Bundle();
+        final FinalDetailFragment finalDetailFragment=new FinalDetailFragment();
         listview_issue.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(k==1)
-                    Log.e("cick",health[position]+" "+position);
-                if(k==2)
-                    Log.e("cick",active[position]+" "+position);
-                if(k==3)
-                    Log.e("cick",fin[position]+" "+position);
-                if(k==4)
-                    Log.e("cick",wills[position]+" "+position);
-                if(k==5)
-                    Log.e("cick",elder[position]+" "+position);
-                if(k==6)
-                    Log.e("cick",rights[position]+" "+position);
+                if(k==1) {
+                    bundle.putString("heading",health[position]);
+                    Heathdata heathdata=new Heathdata();
+                    bundle.putString("data",heathdata.getstring(position));
+                    finalDetailFragment.setArguments(bundle);
+                    getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,finalDetailFragment).commit();
+                    Log.e("cick", health[position] + " " + position);
+                }
+                if(k==2) {
+                    bundle.putString("heading",active[position]);
+                    ActiveAgeing activeAgeing=new ActiveAgeing();
+                    bundle.putString("data",activeAgeing.getstring(position));
+                    finalDetailFragment.setArguments(bundle);
+                    getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,finalDetailFragment).commit();
+                    Log.e("cick", active[position] + " " + position);
+                }
+                if(k==3) {
+                    bundle.putString("heading",fin[position]);
+                    FinancialPlanning financialPlanning=new FinancialPlanning();
+                    bundle.putString("data",financialPlanning.getstring(position));
+                    finalDetailFragment.setArguments(bundle);
+                    getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,finalDetailFragment).commit();
+                    Log.e("cick", fin[position] + " " + position);
+                }
+                if(k==4) {
+                    bundle.putString("heading",wills[position]);
+                    Wills will=new Wills();
+                    bundle.putString("data",will.getstring(position));
+                    finalDetailFragment.setArguments(bundle);
+                    getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,finalDetailFragment).commit();
+                    Log.e("cick", wills[position] + " " + position);
+                }
+                if(k==5) {
+                    bundle.putString("heading",elder[position]);
+                    ElderAbuse elderAbuse=new ElderAbuse();
+                    bundle.putString("data",elderAbuse.getstring(position));
+                    finalDetailFragment.setArguments(bundle);
+                    getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,finalDetailFragment).commit();
+                    Log.e("cick", elder[position] + " " + position);
+                }
+                if(k==6) {
+                    bundle.putString("heading",rights[position]);
+                    Rights rights1=new Rights();
+                    bundle.putString("data",rights1.getstring(position));
+                    finalDetailFragment.setArguments(bundle);
+                    getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,finalDetailFragment).commit();
+                    Log.e("cick", rights[position] + " " + position);
+                }
             }
         });
         return v;

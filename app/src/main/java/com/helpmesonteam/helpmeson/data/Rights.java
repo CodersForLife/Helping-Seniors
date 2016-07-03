@@ -5,7 +5,7 @@ package com.helpmesonteam.helpmeson.data;
  */
 public class Rights {
     public  String[] rights= new String[3];
-    void Rights(){
+    public Rights(){
         rights[0]="One of the core needs of senior citizens is the growing medical attention they require with increasing age. There are not many private health insurance companies who are willing to take on insurance for those above the age of 60-65 years. The Insurance Regulatory Development Authority (IRDA) in May 2009 issued instructions regarding Health Insurance for Senior Citizens to CEOs of all General Health Insurance Companies which among other things includes:\n" +
                 "\n" +
                 "Allowing entry into a health insurance scheme till 65 years of age\n" +

@@ -5,7 +5,7 @@ package com.helpmesonteam.helpmeson.data;
  */
 public class ElderAbuse {
     public String[] elder= new String[1];
-    void ElderAbuse(){
+    public ElderAbuse(){
         elder[0]="This is a trauma undergone by thousands of elders across India. Problem is, no one talks about it, no one reports it, and naturally no one stops it. Let us understand it to try and prevent it.\n" +
                 "\n" +
                 "Victims of Elder Abuse are often:\n" +

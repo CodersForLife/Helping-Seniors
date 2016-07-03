@@ -5,7 +5,7 @@ package com.helpmesonteam.helpmeson.data;
  */
 public class FinancialPlanning {
     String[] finance=new String[5];
-    FinancialPlanning(){
+    public FinancialPlanning(){
         finance[0]="This is important to ensure good financial planning and allow for trouble free succession of assets and property to the spouse and then the children.\n" +
                 "Keep an asset register handy, listing all financial and legal documents and keep your spouse/ next of kin informed.\n" +
                 "Ideally documents should be retrievable and easily locatable in the house itself.\n" +
