@@ -90,5 +90,32 @@ public class AddDetails extends AppCompatActivity {
             }
         });
 
+
+        SharedPreferences preferences =getSharedPreferences("Pref",MODE_APPEND);
+        if(preferences.getBoolean("second",false)){
+            if(preferences.contains("name"))
+                name.setText(preferences.getString("name",""));
+
+            if(preferences.contains("city"))
+            {
+                for(int i=0;i<cities.length;i++)
+                {
+                    if(cities[i].equalsIgnoreCase(preferences.getString("city","")))
+                    {
+                        spinner.setSelection(i);
+                        cty=preferences.getString("city","");
+                    }
+
+                }
+
+            }
+
+            if(preferences.contains("address"))
+                address.setText(preferences.getString("address",""));
+            if(preferences.contains("reference_number"))
+                rnumber.setText(preferences.getString("reference_number",""));
+        }
+
+
     }
 }
