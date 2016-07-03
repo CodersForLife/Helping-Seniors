@@ -176,7 +176,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v == about){
-            Intent i=new Intent(this,SeniorIssues.class);
+            Log.e("oo","kk");
+            Intent i=new Intent(HomeActivity.this,SeniorIssues.class);
             startActivity(i);
         }
         else if(v == story){

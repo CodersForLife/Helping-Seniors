@@ -119,37 +119,37 @@ public class SeniorIssuesFragment extends Fragment implements View.OnClickListen
                 Bundle b=new Bundle();
                 b.putInt("image_clicked",1);
                 frag.setArguments(b);
-                getFragmentManager().beginTransaction().replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
             case R.id.active_ageing:
                 Bundle c=new Bundle();
                 c.putInt("image_clicked",2);
                 frag.setArguments(c);
-                getFragmentManager().beginTransaction().replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
             case R.id.financial_planning:
                 Bundle d=new Bundle();
                 d.putInt("image_clicked",3);
                 frag.setArguments(d);
-                getFragmentManager().beginTransaction().replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
             case R.id.wills_and_legacies:
                 Bundle e=new Bundle();
                 e.putInt("image_clicked",4);
                 frag.setArguments(e);
-                getFragmentManager().beginTransaction().replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
             case R.id.elder_abuse:
                 Bundle f=new Bundle();
                 f.putInt("image_clicked",5);
                 frag.setArguments(f);
-                getFragmentManager().beginTransaction().replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
             case R.id.rights_and_enlightenments:
                 Bundle g=new Bundle();
                 g.putInt("image_clicked",6);
                 frag.setArguments(g);
-                getFragmentManager().beginTransaction().replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
         }
     }
@@ -168,4 +168,5 @@ public class SeniorIssuesFragment extends Fragment implements View.OnClickListen
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }
