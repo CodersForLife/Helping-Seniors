@@ -94,7 +94,7 @@ public class HomeFragment extends Fragment {
         add_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getActivity().getApplicationContext(),AddDetails.class);
+                Intent i=new Intent(getActivity().getApplicationContext(),InstaHelp.class);
                 startActivity(i);
             }
         });
