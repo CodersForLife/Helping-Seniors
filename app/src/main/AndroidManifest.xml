@@ -3,6 +3,8 @@
     package="com.android.helpmeson">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -27,8 +29,10 @@
         <activity
             android:name="com.helpmesonteam.helpmeson.HelpSelection"
             android:label="Type of Help" />
-        <activity android:name="com.helpmesonteam.helpmeson.SeniorIssues"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="com.helpmesonteam.helpmeson.SeniorIssues"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.helpmesonteam.helpmeson.InstaHelp"></activity>
     </application>
 
 </manifest>

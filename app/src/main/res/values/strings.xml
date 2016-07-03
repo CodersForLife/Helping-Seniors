@@ -19,4 +19,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="openDrawer">Open Drawer</string>
     <string name="closeDrawer">Close Drawer</string>
+    <string name="GPSAlertDialogTitle">Can\'t  Access Location</string>
+    <string name="GPSAlertDialogMessage">Please enable your GPS connection</string>
+    <string name="action_settings">Enable</string>
+    <string name="cancel">Cancel</string>
 </resources>
