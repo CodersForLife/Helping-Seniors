@@ -1,4 +1,39 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
 <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:id="@+id/blog_recycler_view"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent" >
+</android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/connection_msg"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:visibility="visible"
+        android:text="Please Check\nYour Internet Connection"/>
+
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_margin="16dp"
+        app:fabSize="normal"
+        android:id="@+id/add_new_help"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_gravity="bottom|right|end"
+        android:layout_height="wrap_content" />
+
+</android.support.design.widget.CoordinatorLayout>
