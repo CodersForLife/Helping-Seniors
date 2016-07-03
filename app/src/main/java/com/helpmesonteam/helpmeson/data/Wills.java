@@ -59,4 +59,7 @@ public class Wills {
                 "Hence, one needs to have a WILL in place in order to ensure that the person of your choice receive the amount meaning thereby the person as nominee and receiver in the WILL are same person.\n" +
                 "Note: Please do not part with your original /photocopies of WILL and any other property documents in any circumstances because hostile person can destroy or make copies of same. The original documents should be kept in locker and only photo copies with you." ;
     }
+    public String getstring(int pos){
+        return will[pos];
+    }
 }

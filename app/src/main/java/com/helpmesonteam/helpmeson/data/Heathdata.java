@@ -725,4 +725,7 @@ public class Heathdata {
                 "If overweight, try losing weight through exercise and consuming nutritious, healthy food.\n" +
                 "Provide the doctor with the right description of your issue and ensure that the medicines prescribed by him/her will not further worsen your condition";
     }
+    public String getstring(int pos){
+        return health[pos];
+    }
 }

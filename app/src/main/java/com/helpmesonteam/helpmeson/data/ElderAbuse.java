@@ -89,4 +89,7 @@ public class ElderAbuse {
                 "Form a Senior Citizens Forum in the community which can act as a powerful agency in cases of detection, prevention and amelioration of domestic abuse\n" +
                 "Set-up Vigilance Committees in urban residential colonies that need to work in collaboration with Residents Associations/Mohalla Committee of the area to deal with cases of Elder Abuse";
     }
+    public String getstring(int pos){
+        return elder[pos];
+    }
 }

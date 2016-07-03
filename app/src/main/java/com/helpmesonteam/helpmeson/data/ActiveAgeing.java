@@ -5,8 +5,8 @@ package com.helpmesonteam.helpmeson.data;
  */
 public class ActiveAgeing {
     String[] active=new String[4];
-    ActiveAgeing(){
-        active[0]="According to projections made by the UN Population Division, there will be approximately two elderly persons for every child in the world by the year 2050.\n" +
+    ActiveAgeing() {
+        active[0] = "According to projections made by the UN Population Division, there will be approximately two elderly persons for every child in the world by the year 2050.\n" +
                 "This implies that the aged 60 and above, which currently constitute less than 20% of the population will account for 32% of the population by 2050.\n" +
                 "Today, the biggest enemies of the geriatric population include solitude, loneliness, isolation, neglect and a sense of not being wanted.\n" +
                 "Our society has traditionally treated the care of the elderly as the responsibility of the younger generation.\n" +
@@ -47,7 +47,7 @@ public class ActiveAgeing {
                 "Choose to be happy: If you are lonely, you are probably depressed and unhappy. Choose to be happy in spite of the circumstances. For example, Asking yourself questions like, \"How does my unhappiness change my situation?\" will make you realize that it doesnt, and that it just makes it worse. So make things better for yourself by choosing to be happy. Fight depression by talking out your problems. Talk to friends, relatives or a counselor, and keep talking until you find yourself maintaining an attitude of optimism.\n" +
                 "Collect good thoughts: If you are lonely, collect inspirational thoughts, good jokes, meaningful poems, and literary masterpieces. Read as many books as you can. Make a list of good things that you read about and then try to memorize some inspirational quotation and share it with whoever comes your way. Collect good thoughts to share with those people who come your way, and soon others will seek your company.\n" +
                 "Join a social group: If you are lonely, join one of the many social groups in your community. See that you visit the Senior Citizens Club regularly and meet new people. Commit yourself to one or more groups that interest you.";
-        active[1]="Ageing is a slow process that every individual goes through.\n" +
+        active[1] = "Ageing is a slow process that every individual goes through.\n" +
                 "It is a process that projects visible changes. Some of these changes include greying hair, wrinkling of the skin as well as internal physiological changes\n" +
                 "The process varies widely from individual to individual.\n" +
                 "It is generally associated with the decline of bodily functions.\n" +
@@ -81,7 +81,7 @@ public class ActiveAgeing {
                 "Adequate social interaction\n" +
                 "Being aware of the issues related to ageing and taking preventing measures against these issues\n" +
                 "Always consult a doctor if unwell. Do not self-medicate";
-        active[2]="There is no way to avoid the realization that one’s body is not what it used to be. With age, the overall tone of the body begins to sag and innumerable inner parts call attention to themselves through their mal-function.\n" +
+        active[2] = "There is no way to avoid the realization that one’s body is not what it used to be. With age, the overall tone of the body begins to sag and innumerable inner parts call attention to themselves through their mal-function.\n" +
                 "Some problems may be fairly petty, like the almost inevitable appearance of wrinkles. Others are painful, debilitating, and cause a sense of shame (e.g. incontinence).\n" +
                 "An important aspect of preventing health problems in older adults and improving their health is to encourage individuals to exercise more and to develop better nutritional habits.\n" +
                 "The older adults are healthier and happier when they are active.\n" +
@@ -102,7 +102,7 @@ public class ActiveAgeing {
                 "Laughter Club members express appreciation for their club through their feelings of ‘being in good health’ and also reflected in their faces and in their speech.\n" +
                 "All members agree that the interpersonal bonding through the laughter club is the best thing to have happened to them post retirement.\n" +
                 "So why wait? Start a laughter Club today!";
-        active[3]="Healthy eating is essential for continued good health\n" +
+        active[3] = "Healthy eating is essential for continued good health\n" +
                 "Eating the right type of food is important for a healthy lifestyle.\n" +
                 "As people age, they are susceptible to a multitude of diseases/conditions.\n" +
                 "Many of these diseases/conditions like hypertension, diabetes and obesity can be prevented or at least modified by consuming a balanced diet.\n" +
@@ -140,4 +140,8 @@ public class ActiveAgeing {
                 "consume more of cereals and pulses.\n" +
                 "Osteoporosis: In order to improve overall bone health, food items rich in calcium and vitamin D should be consumed, such as milk and milk products. It has been suggested that phytoestrogens from soy and some other plant sources also account for better bone health.";
     }
+    public String getstring(int pos){
+        return active[pos];
+    }
+
 }

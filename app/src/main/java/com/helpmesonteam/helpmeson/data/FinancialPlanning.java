@@ -263,4 +263,7 @@ public class FinancialPlanning {
                 "A senior citizen should plan his/her investment policy in such a way that there is no tension or worry for him/her in managing the investment and to ensure a regular, reasonable flow of income throughout his/her lifetime.\n" +
                 "Broadly speaking, a senior citizen must so plan his/her investments, so that he/she does not have to depend on his/her children and family for maintenance and so that he/she is assured of a steady and regular income.";
     }
+    public String getstring(int pos){
+        return finance[pos];
+    }
 }

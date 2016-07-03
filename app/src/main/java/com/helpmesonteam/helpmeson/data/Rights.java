@@ -65,4 +65,7 @@ public class Rights {
                 "PNB PERSONAL LOAN SCHEME FOR PENSIONERS offers loans at low interest rates, such as Personal Loan Scheme for Pensioners to meet immediate requirements like medical expenses.";
 
     }
+    public String getstring(int pos){
+        return rights[pos];
+    }
 }
