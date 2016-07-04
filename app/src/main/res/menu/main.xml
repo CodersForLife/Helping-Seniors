@@ -5,23 +5,27 @@
     <item android:id="@+id/edit_detail" android:title="Edit Detail"
         android:orderInCategory="100"  />
     <item
+        android:id="@+id/ambulance"
+        android:orderInCategory="99"
+        android:title="Ambulance" />
+    <item
+        android:id="@+id/fire"
+        android:orderInCategory="98"
+        android:title="Fire" />
+    <item
+        android:id="@+id/police"
+        android:orderInCategory="97"
+        android:title="Police"/>
+    <item
+        android:id="@+id/helpmeson"
+        android:orderInCategory="96"
+        android:title="Helpmeson"/>
+
+
+
+    <item
         android:id="@+id/sos"
         android:title="SOS"
         app:showAsAction="always"
-         >
-        <menu>
-            <item
-                android:id="@+id/ambulance"
-                android:title="Ambulance" />
-            <item
-                android:id="@+id/fire"
-                android:title="Fire" />
-            <item
-                android:id="@+id/police"
-                android:title="Police"/>
-            <item
-                android:id="@+id/helpmeson"
-                android:title="Helpmeson"/>
-        </menu>
-    </item>
+         ></item>
 </menu>
