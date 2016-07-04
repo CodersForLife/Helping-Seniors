@@ -9,31 +9,26 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name="com.helpmesonteam.helpmeson.HelpMeSonApplication"
         android:allowBackup="true"
         android:icon="@mipmap/appicon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.helpmesonteam.helpmeson.MainActivity">
+        <activity android:name="com.helpmesonteam.helpmeson.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.helpmesonteam.helpmeson.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name="com.helpmesonteam.helpmeson.AddDetails" />
-        <activity android:name="com.helpmesonteam.helpmeson.FirstScreen" />
-        <activity
-            android:name="com.helpmesonteam.helpmeson.HelpSelection"
-            android:label="Type of Help" />
-        <activity
-            android:name="com.helpmesonteam.helpmeson.SeniorIssues"
-             />
-        <activity android:name="com.helpmesonteam.helpmeson.InstaHelp"></activity>
+        <activity android:name="com.helpmesonteam.helpmeson.activity.HomeActivity" />
+        <activity android:name="com.helpmesonteam.helpmeson.activity.AddDetails" />
+        <activity android:name="com.helpmesonteam.helpmeson.activity.FirstScreen" />
+        <activity android:name="com.helpmesonteam.helpmeson.activity.HelpSelection" />
+        <activity android:name="com.helpmesonteam.helpmeson.activity.SeniorIssues" />
+        <activity android:name="com.helpmesonteam.helpmeson.activity.InstaHelpDialogActivity"
+                  android:theme="@style/Theme.UserDialog"/>
     </application>
 
 </manifest>
