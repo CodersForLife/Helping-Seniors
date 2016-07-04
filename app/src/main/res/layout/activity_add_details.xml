@@ -98,8 +98,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.25"
                 android:ems="10"
-                android:gravity="center"
-                android:hint="Alternate Number"
+                android:hint="Alternate Contact Number"
                 android:inputType="phone"
                 android:lines="1"
                 android:textColor="@color/text_color" />

@@ -18,6 +18,7 @@ import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import com.android.helpmeson.R;
+import com.helpmesonteam.helpmeson.activity.AddDetails;
 import com.helpmesonteam.helpmeson.activity.InstaHelpDialogActivity;
 
 
@@ -156,6 +157,7 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
 }
     // TODO: Rename method, update argument and hook method into UI event
 

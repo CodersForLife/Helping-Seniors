@@ -14,7 +14,8 @@
             android:id="@+id/webView"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/buttonRaiseHelpRequest"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -26,6 +27,16 @@
         android:visibility="gone"
         android:text="Please Check\nYour Internet Connection"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Raise Help Request"
+            android:id="@+id/buttonRaiseHelpRequest"
+            android:layout_alignParentBottom="true"
+            android:onClick="raiseHelpRequest"
+            android:background="@android:color/holo_red_dark"
+            android:textColor="@color/white"/>
+
     </RelativeLayout>
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -35,6 +46,7 @@
         android:id="@+id/add_new_help"
         android:src="@android:drawable/ic_input_add"
         android:layout_gravity="bottom|right|end"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
 </android.support.design.widget.CoordinatorLayout>

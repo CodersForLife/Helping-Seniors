@@ -218,4 +218,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
             }
         }
     }
+
+    public void raiseHelpRequest(View view){
+        Intent i=new Intent(HomeActivity.this,AddDetails.class);
+        startActivity(i);
+    }
 }
