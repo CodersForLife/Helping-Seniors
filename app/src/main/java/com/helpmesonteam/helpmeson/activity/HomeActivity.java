@@ -33,7 +33,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private View homeNavigationHeaderView;
     private Toolbar homeTopToolbar;
     private FragmentTransaction fragmentTransaction;
-    private LinearLayout about,story,call,mail,rate,header;
+    private LinearLayout about,story,call,mail,rate,header,senior;
     Button btn1;
     Button btn2;
 
@@ -57,7 +57,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         call= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.call);
         mail= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.mail);
         rate= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.rate);
-
+        senior= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.senior_issue);
 
 
 
@@ -80,6 +80,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         call.setOnClickListener(this);
         mail.setOnClickListener(this);
         rate.setOnClickListener(this);
+        senior.setOnClickListener(this);
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, homeDrawerLayout, homeTopToolbar, R.string.openDrawer, R.string.closeDrawer) {
             @Override
             public void onDrawerClosed(View drawerView) {
@@ -184,12 +185,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v == about){
-            Log.e("oo","kk");
-            Intent i=new Intent(HomeActivity.this,SeniorIssues.class);
-            startActivity(i);
+
         }
         else if(v == story){
 
+        }
+        else if (v== senior){
+            Log.e("oo","kk");
+            Intent i=new Intent(HomeActivity.this,SeniorIssues.class);
+            startActivity(i);
         }
         else if(v == call){
             Intent intent = new Intent(Intent.ACTION_DIAL);

@@ -2,6 +2,7 @@ package com.helpmesonteam.helpmeson.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.android.helpmeson.R;
 import com.android.theme.activity.BaseActivity;
@@ -25,5 +26,15 @@ public class SeniorIssues extends BaseActivity {
             super.onBackPressed();
         }
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
