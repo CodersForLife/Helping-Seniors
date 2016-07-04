@@ -19,7 +19,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choose"
+                android:text="Type Of Help"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:gravity="center"/>
@@ -33,7 +33,7 @@
             android:layout_gravity="center"
             android:layout_margin="7dp"
             android:layout_weight="1"
-            android:text="Wait for help"
+            android:text="Raise Help Reuest"
             android:textColor="@color/text_color"
             android:background="@color/gray"/>
 

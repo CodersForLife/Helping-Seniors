@@ -8,6 +8,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Thank you we will get in touch with you soon"
+        android:id="@+id/textView2"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,9 +40,9 @@
         android:id="@+id/button2"
         android:background="@color/colorPrimary"
         android:textColor="@color/white"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="92dp" />
+        android:layout_below="@+id/textViewOr"
+        android:layout_marginTop="20dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,29 +50,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Or"
         android:textColor="@color/colorPrimary"
-        android:id="@+id/textView"
-        android:layout_marginTop="40dp"
+        android:id="@+id/textViewOr"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Thank you we will\n             get in\n touch with you soon"
-        android:id="@+id/textView2"
-        android:textColor="@color/colorPrimary"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@android:drawable/ic_menu_close_clear_cancel"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
 </RelativeLayout>

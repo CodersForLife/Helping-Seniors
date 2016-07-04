@@ -26,13 +26,14 @@ public class InstaHelpDialogActivity extends DialogActivity {
             public void onClick(View v) {
                 Intent i=new Intent(InstaHelpDialogActivity.this,AddDetails.class);
                 startActivity(i);
+                finish();
             }
         });
 
         direct_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              /*  GPSTracker gpsTracker=new GPSTracker(InstaHelp.this);
+             /*   GPSTracker gpsTracker=new GPSTracker(InstaHelp.this);
                 if(gpsTracker.canGetLocation()){
                     String lattitude=String.valueOf(gpsTracker.getLatitude());
                     String longitude=String.valueOf(gpsTracker.getLongitude());
