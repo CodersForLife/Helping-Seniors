@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">commonframework</string>
+    <string name="local_api_file_name">service_local.json</string>
+    <string name="app_not_available">Unable to find app in play store!</string>
+</resources>

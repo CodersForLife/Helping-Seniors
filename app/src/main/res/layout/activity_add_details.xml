@@ -2,75 +2,142 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="2"
-    android:layout_height="match_parent">
+    android:weightSum="2">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.25"/>
+        android:orientation="vertical"
+        android:layout_margin="20dp">
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:maxLines="1"
-        android:inputType="textPersonName"
-        android:ems="1"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:hint="Name"
-        android:layout_weight="0.25" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/usernameWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColorHint="@color/colorPrimary">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Select City: "
-        android:gravity="center" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:ems="1"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textColor="@color/text_color" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
 
 
-    <Spinner
-        android:id="@+id/city_spinner"
-        android:gravity="center"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.25" />
+            <EditText
+                android:id="@+id/age_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.25"
+                android:ems="1"
+                android:hint="Age"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/text_color" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Alternate Number"
-        android:inputType="phone"
-        android:lines="1"
-        android:ems="10"
-        android:id="@+id/rnumber"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.25" />
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/address"
-        android:inputType="textMultiLine"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.25"
-        android:hint="Address"
-        android:lines="3"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.25"/>
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Done"
-        android:background="@drawable/button_prop"
-        android:id="@+id/done"
-        android:layout_gravity="center_horizontal"
-         />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--  <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:gravity="center"
+              android:hint="Select State: " />
+
+
+          <Spinner
+              android:id="@+id/state_spinner"
+              android:layout_width="200dp"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_weight="0.25"
+              android:gravity="center" />-->
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="Select City: "
+            android:textColor="@color/colorPrimary" />
+
+
+        <Spinner
+            android:id="@+id/city_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:gravity="center" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
+
+            <EditText
+                android:id="@+id/rnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.25"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Alternate Number"
+                android:inputType="phone"
+                android:lines="1"
+                android:textColor="@color/text_color" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.25"
+                android:hint="Address"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:textColor="@color/text_color" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25" />
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_prop"
+            android:text="Done"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
 
 </LinearLayout>

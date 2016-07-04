@@ -1,0 +1,85 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    -->
+    <style name="AppTheme" parent="Custome.Theme">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+
+    <style name="Custome.Theme" parent="Theme.AppCompat.Light.NoActionBar"><!--
+        <item name="colorControlActivated">@color/blue_primary</item>-->
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:windowBackground">@android:color/black</item>-->
+        <!--<item name="titleTextStyle">@style/BrainacTheme.ActionBar.TitleTextStyle</item>-->
+        <!--<item name="android:buttonStyle">@style/AppThemeButton</item>-->
+        <!-- 	Below attribute is an fix for menu item background it may affect spinner background if we use spinner component in interior application -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/AnimationTheme.Window</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AnimationTheme.Window" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_to_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/static_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/static_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_left_to_right</item>
+    </style>
+
+
+    <style name="Custom.ToolbarTheme" parent="Application.NoActionBar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="actionBarSize">@dimen/toolbar_common_height</item>
+        <item name="android:actionBarSize">@dimen/toolbar_common_height</item>
+        <item name="actionMenuTextAppearance">@style/Custom.ToolbarTheme.MenuTextAppearance</item>
+        <item name="android:actionOverflowButtonStyle">@style/Custom.Theme.Overflow</item>
+        <item name="actionOverflowButtonStyle">@style/Custom.Theme.Overflow</item>
+    </style>
+
+    <style name="Application.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimationTheme.Window</item>
+    </style>
+
+    <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="Custom.Theme.Overflow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <!--<item name="android:src">@drawable/wag_action_over_flow_icon</item>-->
+        <item name="android:windowAnimationStyle">@style/AnimationTheme.Window</item>
+    </style>
+
+
+    <style name="Custom.ToolbarTheme.MenuTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BrainacTheme.ActionBar.TitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:text">@string/app_name</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+    <style name="about_us_text_content">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+</resources>

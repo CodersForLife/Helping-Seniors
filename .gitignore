@@ -6,3 +6,6 @@
 .DS_Store
 /build
 /captures
+theme/build/
+commonframework/build/
+network/build/
