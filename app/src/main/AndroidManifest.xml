@@ -27,7 +27,7 @@
         <activity android:name="com.helpmesonteam.helpmeson.activity.FirstScreen" />
         <activity android:name="com.helpmesonteam.helpmeson.activity.HelpSelection" />
         <activity android:name="com.helpmesonteam.helpmeson.activity.SeniorIssues" />
-        <activity android:name="com.helpmesonteam.helpmeson.activity.InstaHelp"
+        <activity android:name="com.helpmesonteam.helpmeson.activity.InstaHelpDialogActivity"
                   android:theme="@style/Theme.UserDialog"/>
     </application>
 

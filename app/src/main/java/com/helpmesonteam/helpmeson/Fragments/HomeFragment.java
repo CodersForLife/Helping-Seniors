@@ -6,11 +6,9 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +16,9 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.helpmeson.R;
-import com.helpmesonteam.helpmeson.MyAdapter;
-import com.helpmesonteam.helpmeson.activity.InstaHelp;
+import com.helpmesonteam.helpmeson.activity.InstaHelpDialogActivity;
 
 
 public class HomeFragment extends Fragment {
@@ -125,7 +121,7 @@ public class HomeFragment extends Fragment {
         add_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getActivity().getApplicationContext(),InstaHelp.class);
+                Intent i = new Intent(getActivity().getApplicationContext(), InstaHelpDialogActivity.class);
                 startActivity(i);
             }
         });

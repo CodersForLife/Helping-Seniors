@@ -2,7 +2,6 @@ package com.helpmesonteam.helpmeson.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,7 +12,7 @@ import com.android.theme.activity.DialogActivity;
 
 import im.delight.android.location.SimpleLocation;
 
-public class InstaHelp extends DialogActivity {
+public class InstaHelpDialogActivity extends DialogActivity {
     Button wait_for_help,direct_help;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class InstaHelp extends DialogActivity {
         wait_for_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(InstaHelp.this,AddDetails.class);
+                Intent i=new Intent(InstaHelpDialogActivity.this,AddDetails.class);
                 startActivity(i);
             }
         });
@@ -48,10 +47,10 @@ public class InstaHelp extends DialogActivity {
                     gpsTracker.showSettingsAlert();
                 }*/
 
-                SimpleLocation location=new SimpleLocation(InstaHelp.this);
+                SimpleLocation location=new SimpleLocation(InstaHelpDialogActivity.this);
                 if (!location.hasLocationEnabled()) {
                     // ask the user to enable location access
-                    SimpleLocation.openSettings(InstaHelp.this);
+                    SimpleLocation.openSettings(InstaHelpDialogActivity.this);
                 }
                 final double latitude = location.getLatitude();
                 final double longitude = location.getLongitude();
