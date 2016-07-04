@@ -73,7 +73,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:gravity="center"
             android:hint="Select City: "
             android:textColor="@color/colorPrimary" />
 
@@ -85,6 +84,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.25"
             android:gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"

@@ -34,7 +34,7 @@
             android:id="@+id/buttonRaiseHelpRequest"
             android:layout_alignParentBottom="true"
             android:onClick="raiseHelpRequest"
-            android:background="@android:color/holo_red_dark"
+            android:background="@color/colorPrimary"
             android:textColor="@color/white"/>
 
     </RelativeLayout>
