@@ -10,7 +10,7 @@ public class Constants {
     public static final int SERVICE_DEMO = 2;
     public static final int SERVICE_LOCAL = 1;
 
-    public static int SERVER_MODE=SERVICE_LOCAL;
+    public static int SERVER_MODE=SERVICE_DEMO;
 
     //api constants
     public static String SERVICE_PROD_JSON = "service_prod.json";

@@ -1,12 +1,13 @@
-package com.helpmesonteam.helpmeson;
+package com.helpmesonteam.helpmeson.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.android.helpmeson.R;
+import com.android.theme.activity.BaseActivity;
 import com.helpmesonteam.helpmeson.Fragments.SeniorIssuesFragment;
 
-public class SeniorIssues extends AppCompatActivity {
+public class SeniorIssues extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

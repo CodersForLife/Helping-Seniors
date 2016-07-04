@@ -1,8 +1,8 @@
-package com.helpmesonteam.helpmeson;
+package com.helpmesonteam.helpmeson.Fragments;
 
 import android.app.Dialog;
 
-import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -87,6 +87,13 @@ public class helpDialogFragment extends DialogFragment {
             }
         });
         return rootView;
+    }
+
+    @Override
+    public void onCancel(DialogInterface dialog) {
+        super.onCancel(dialog);
+        if(getTag().equalsIgnoreCase("HelpSelection"))
+            getActivity().finish();
     }
 
     @Override

@@ -15,6 +15,39 @@
     </string-array>
 
 
+    <string-array name="states_list">
+        <item>Ahmedabad</item>
+        <item>Aizawl</item>
+        <item>Amritsar</item>
+        <item>Balaghat</item>
+        <item>Delhi</item>
+        <item>Faridabad</item>
+        <item>Gandhinagar</item>
+        <item>Indore</item>
+        <item>Mumbai</item>
+        <item>Rajkot</item>
+    </string-array>
+
+    <string name="alert">Alert</string>
+    <string name="alert_message">Do you want to send request for  </string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="ok">OK</string>
+
+    <string name="server_failed">Server failed</string>
+    <string name="server_unavailable">Server unavailable please try again later</string>
+    <string name="please_wait">Please wait</string>
+    <string name="loading">Loading</string>
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
+
+    <string name="title_of_data_connection">Data Connectivity</string>
+
+    <string name="title_of_data_message">Please check your internet connectivity </string>
+    
+    
+    <string name="help_request">Help Request</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="openDrawer">Open Drawer</string>
@@ -23,4 +56,5 @@
     <string name="GPSAlertDialogMessage">Please enable your GPS connection</string>
     <string name="action_settings">Enable</string>
     <string name="cancel">Cancel</string>
+    
 </resources>

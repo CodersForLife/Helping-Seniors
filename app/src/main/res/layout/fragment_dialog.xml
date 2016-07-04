@@ -15,7 +15,7 @@
         android:id="@+id/button"
         android:textColor="@color/white"
         android:background="@color/colorPrimary"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
        />
 
@@ -48,9 +48,10 @@
         android:text="Thank you we will\n             get in\n touch with you soon"
         android:id="@+id/textView2"
         android:textColor="@color/colorPrimary"
-        android:layout_below="@+id/button2"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="59dp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
     <ImageView
         android:layout_width="wrap_content"

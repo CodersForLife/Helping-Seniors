@@ -20,6 +20,9 @@ public class ServiceConstants {
 
 
     public static final String IMAGE_URL_ENDPOINT = "imageEndPoint";
+
+    public static final String RegisterRequest = "register_request";
+
     public static final String Login = "login";
     public static final String Register = "register";
     public static final String ServiceList = "servicelist";
@@ -36,5 +39,7 @@ public class ServiceConstants {
     public static final String CustomerServiceCancel = "cancelcustomerrequest";
     public static final String PincodeList = "viewpincodelist";
     public static final String customerNotification = "viewnotification";
+
+
 
 }

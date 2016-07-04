@@ -1,4 +1,4 @@
-package com.helpmesonteam.helpmeson;
+package com.helpmesonteam.helpmeson.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,13 +8,15 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.android.helpmeson.R;
+import com.android.theme.activity.BaseActivity;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        hideToolbar();
         final SharedPreferences sp=getSharedPreferences("Pref",MODE_PRIVATE);
         new Handler().postDelayed(new Runnable() {
             @Override

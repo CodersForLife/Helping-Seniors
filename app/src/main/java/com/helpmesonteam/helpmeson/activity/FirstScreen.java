@@ -1,4 +1,4 @@
-package com.helpmesonteam.helpmeson;
+package com.helpmesonteam.helpmeson.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,8 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android.helpmeson.R;
+import com.android.theme.activity.BaseActivity;
 
-public class FirstScreen extends Activity {
+public class FirstScreen extends BaseActivity {
     EditText mnumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

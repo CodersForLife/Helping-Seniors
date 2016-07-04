@@ -1,9 +1,8 @@
-package com.helpmesonteam.helpmeson;
+package com.helpmesonteam.helpmeson.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -15,8 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.helpmeson.R;
-
-import java.net.InetAddress;
+import com.helpmesonteam.helpmeson.MyAdapter;
+import com.helpmesonteam.helpmeson.activity.InstaHelp;
 
 
 public class HomeFragment extends Fragment {

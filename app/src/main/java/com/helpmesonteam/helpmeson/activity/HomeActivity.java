@@ -1,8 +1,8 @@
-package com.helpmesonteam.helpmeson;
+package com.helpmesonteam.helpmeson.activity;
 
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -11,9 +11,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -23,14 +23,17 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.android.helpmeson.R;
+import com.android.theme.activity.BaseActivity;
+import com.helpmesonteam.helpmeson.Fragments.HomeFragment;
+import com.helpmesonteam.helpmeson.Fragments.helpDialogFragment;
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
+public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private DrawerLayout homeDrawerLayout;
     private NavigationView homeNavigationView;
     private View homeNavigationHeaderView;
     private Toolbar homeTopToolbar;
     private FragmentTransaction fragmentTransaction;
-    private LinearLayout about,story,call,mail,rate;
+    private LinearLayout about,story,call,mail,rate,header;
     Button btn1;
     Button btn2;
 
@@ -38,6 +41,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        hideToolbar();
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fl_home_screen_frame_layout, new HomeFragment());
         fragmentTransaction.commit();
@@ -47,11 +51,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         homeDrawerLayout = (DrawerLayout) findViewById(R.id.dl_home_screen_drawer_layout);
         homeTopToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(homeTopToolbar);
+        header = (LinearLayout) homeNavigationHeaderView.findViewById(R.id.nav_header);
         about= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.abt_hlp);
         story= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.top_sto);
         call= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.call);
         mail= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.mail);
         rate= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.rate);
+
+
+
 
         final SharedPreferences sp=getSharedPreferences("Pref",MODE_PRIVATE);
         Log.e("kk",sp.getBoolean("fourth",true)+"");
@@ -128,10 +136,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (id) {
 
-            case R.id.edit_detail:
+            /*case R.id.edit_detail:
                 Intent intent = new Intent(HomeActivity.this, FirstScreen.class);
                 startActivity(intent);
-                return true;
+                return true;*/
             case R.id.ambulance:
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:102"));

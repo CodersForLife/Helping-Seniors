@@ -6,21 +6,8 @@
       "appConfig":"/appConfig.php",
       "imageEndPoint": "images/",
       "login": "login",
-      "register": "register",
-      "servicelist":"service.php/serviceslist",
-      "createcustomerservicerequest":"service.php/createcustomerservicerequest",
-      "customerservicerequirementlist":"service.php/customerservicerequest/",
-      "viewcustomerproposal":"service.php/viewcustomerproposal/",
-      "acceptproposal":"service.php/acceptservicerequestproposal",
-      "customeraddress":"profile.php/customeraddress",
-      "customergender":"profile.php/customergender",
-      "customermobileno":"profile.php/customermobileno",
-      "update_profile_image":"profile.php/customerprofilepic",
-      "customername":"profile.php/customername",
-      "completecustomerrequest":"service.php/completecustomerrequest",
-      "cancelcustomerrequest":"service.php/cancelcustomerrequest",
-      "viewpincodelist":"service.php/viewpincodelist",
-      "viewnotification":"notification.php/viewnotification/"
+
+      "register_request":"register_request"
     },
     "apikey": {
       "access_token" :  "72a57f585e0b42cf8e66930c4318d006",

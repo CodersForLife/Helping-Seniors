@@ -6,4 +6,6 @@
     <color name="back">#512F54</color>
     <color name="grey">#dbcbe1</color>
     <color name="white">#ffffff</color>
+    <color name="text_color">#555</color>
+    <color name="gray">#D2D5D7</color>
 </resources>
