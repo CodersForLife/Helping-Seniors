@@ -160,7 +160,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="Rights and Enlightenments"/>
+                android:text="Rights and Entitlements"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
