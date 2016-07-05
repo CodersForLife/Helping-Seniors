@@ -99,11 +99,8 @@ public class clickDetailFragment extends Fragment {
         final String[] wills={"How to prepare your will"};
         final String[] elder={"Elder Abuse"};
         final String[] rights={"Health Insurance schemes","Maintenance and Welfare of parents and Senior Citizens Act","Pension Schemes"};
-
-
         final int k=getArguments().getInt("image_clicked");
         ArrayAdapter<String> adapter = null;
-
         if(k==1)
         {
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,health);
