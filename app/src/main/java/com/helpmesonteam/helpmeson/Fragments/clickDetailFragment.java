@@ -108,32 +108,38 @@ public class clickDetailFragment extends Fragment {
         {
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,health);
             img_path=R.drawable.health;
+            getActivity().setTitle("Health");
         }
 
 
         if(k==2){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,active);
             img_path=R.drawable.active;
+            getActivity().setTitle("Active Ageing");
         }
 
         if(k==3){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,fin);
             img_path=R.drawable.fin;
+            getActivity().setTitle("Financial Planning");
         }
 
         if(k==4){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,wills);
             img_path=R.drawable.wills;
+            getActivity().setTitle("Wills and Legacies");
         }
 
         if(k==5){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,elder);
             img_path=R.drawable.elder;
+            getActivity().setTitle("Elder Abuse");
         }
 
         if(k==6){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,rights);
             img_path=R.drawable.rights;
+            getActivity().setTitle("Rights and Entitlements");
         }
         listview_issue.setAdapter(adapter);
         issue_category.setBackgroundResource(img_path);
