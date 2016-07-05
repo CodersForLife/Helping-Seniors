@@ -30,7 +30,7 @@ public class SeniorIssuesFragment extends Fragment implements View.OnClickListen
     private String mParam1;
     private String mParam2;
 
-    TextView health,active,financial,wills,abuse,rights;
+    ImageView health,active,financial,wills,abuse,rights;
     private OnFragmentInteractionListener mListener;
 
     public SeniorIssuesFragment() {
@@ -71,12 +71,12 @@ public class SeniorIssuesFragment extends Fragment implements View.OnClickListen
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_senior_issues, container, false);
 
-        health=(TextView) v.findViewById(R.id.health);
-        active=(TextView) v.findViewById(R.id.activeageing);
-        financial=(TextView)v.findViewById(R.id.financialplanning);
-        wills=(TextView) v.findViewById(R.id.willslegacies);
-        abuse=(TextView) v.findViewById(R.id.elderabuse);
-        rights=(TextView) v.findViewById(R.id.rightsenlightenments);
+        health=(ImageView) v.findViewById(R.id.health);
+        active=(ImageView) v.findViewById(R.id.activeageing);
+        financial=(ImageView) v.findViewById(R.id.financialplanning);
+        wills=(ImageView) v.findViewById(R.id.willslegacies);
+        abuse=(ImageView) v.findViewById(R.id.elderabuse);
+        rights=(ImageView) v.findViewById(R.id.rightsenlightenments);
 
         health.setOnClickListener(this);
         active.setOnClickListener(this);
