@@ -51,7 +51,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         homeDrawerLayout = (DrawerLayout) findViewById(R.id.dl_home_screen_drawer_layout);
         homeTopToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(homeTopToolbar);
-        header = (LinearLayout) homeNavigationHeaderView.findViewById(R.id.nav_header);
+       // header = (LinearLayout) homeNavigationHeaderView.findViewById(R.id.nav_header);
         about= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.abt_hlp);
         story= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.top_sto);
         call= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.call);

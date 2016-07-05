@@ -28,6 +28,7 @@
         android:textColor="#ffffff"
         android:layout_weight="1"
         android:textSize="20dp"
+        android:layout_marginTop="10dp"
         android:text="You need help ? we are here"
         android:layout_gravity="center_horizontal" />
 
