@@ -86,9 +86,9 @@
         android:paddingTop="12dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:background="@drawable/aboutus"
-            android:layout_height="wrap_content"/>
+            android:layout_width="29dp"
+            android:background="@drawable/citizenicon"
+            android:layout_height="29dp"/>
         <!--android:background="@android:drawable/"-->
 
 

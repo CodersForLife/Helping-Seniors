@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 /**
@@ -29,7 +30,7 @@ public class SeniorIssuesFragment extends Fragment implements View.OnClickListen
     private String mParam1;
     private String mParam2;
 
-    ImageView health,active,financial,wills,abuse,rights;
+    TextView health,active,financial,wills,abuse,rights;
     private OnFragmentInteractionListener mListener;
 
     public SeniorIssuesFragment() {
@@ -70,12 +71,12 @@ public class SeniorIssuesFragment extends Fragment implements View.OnClickListen
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_senior_issues, container, false);
 
-        health=(ImageView)v.findViewById(R.id.health);
-        active=(ImageView)v.findViewById(R.id.active_ageing);
-        financial=(ImageView)v.findViewById(R.id.financial_planning);
-        wills=(ImageView)v.findViewById(R.id.wills_and_legacies);
-        abuse=(ImageView)v.findViewById(R.id.elder_abuse);
-        rights=(ImageView)v.findViewById(R.id.rights_and_enlightenments);
+        health=(TextView) v.findViewById(R.id.health);
+        active=(TextView) v.findViewById(R.id.activeageing);
+        financial=(TextView)v.findViewById(R.id.financialplanning);
+        wills=(TextView) v.findViewById(R.id.willslegacies);
+        abuse=(TextView) v.findViewById(R.id.elderabuse);
+        rights=(TextView) v.findViewById(R.id.rightsenlightenments);
 
         health.setOnClickListener(this);
         active.setOnClickListener(this);
@@ -121,31 +122,31 @@ public class SeniorIssuesFragment extends Fragment implements View.OnClickListen
                 frag.setArguments(b);
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
-            case R.id.active_ageing:
+            case R.id.activeageing:
                 Bundle c=new Bundle();
                 c.putInt("image_clicked",2);
                 frag.setArguments(c);
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
-            case R.id.financial_planning:
+            case R.id.financialplanning:
                 Bundle d=new Bundle();
                 d.putInt("image_clicked",3);
                 frag.setArguments(d);
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
-            case R.id.wills_and_legacies:
+            case R.id.willslegacies:
                 Bundle e=new Bundle();
                 e.putInt("image_clicked",4);
                 frag.setArguments(e);
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
-            case R.id.elder_abuse:
+            case R.id.elderabuse:
                 Bundle f=new Bundle();
                 f.putInt("image_clicked",5);
                 frag.setArguments(f);
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frame_layout_to_be_replaced_by_fragment,frag).commit();
                 break;
-            case R.id.rights_and_enlightenments:
+            case R.id.rightsenlightenments:
                 Bundle g=new Bundle();
                 g.putInt("image_clicked",6);
                 frag.setArguments(g);

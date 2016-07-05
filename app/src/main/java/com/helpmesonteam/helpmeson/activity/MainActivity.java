@@ -17,7 +17,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         hideToolbar();
-        final SharedPreferences sp=getSharedPreferences("Pref",MODE_PRIVATE);
+        final SharedPreferences sp=getSharedPreferences("Pref",MODE_APPEND);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

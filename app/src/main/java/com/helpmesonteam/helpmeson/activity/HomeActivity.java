@@ -61,7 +61,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
 
 
-        final SharedPreferences sp=getSharedPreferences("Pref",MODE_PRIVATE);
+        final SharedPreferences sp=getSharedPreferences("Pref",MODE_APPEND);
         Log.e("kk",sp.getBoolean("fourth",true)+"");
         if (sp.getBoolean("fourth",true)){
             helpDialogFragment dialog=new helpDialogFragment();

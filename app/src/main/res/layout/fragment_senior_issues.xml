@@ -10,22 +10,40 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:weightSum="2"
-
         android:layout_height="match_parent">
-        <ImageView
-            android:layout_weight="1"
-            android:id="@+id/health"
-            android:background="@drawable/health"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:layout_height="match_parent" />
-        <ImageView
             android:layout_weight="1"
-            android:id="@+id/active_ageing"
-            android:layout_margin="5dp"
-            android:background="@drawable/active"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/health"
+                android:textColor="@color/black"
+                android:background="@drawable/health"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="Health"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:id="@+id/activeageing"
+                android:background="@drawable/activeageing"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="Active Ageing"/>
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -34,20 +52,38 @@
         android:orientation="horizontal"
         android:weightSum="2"
         android:layout_height="match_parent">
-        <ImageView
-            android:layout_weight="1"
-            android:id="@+id/financial_planning"
-            android:background="@drawable/fin"
-            android:layout_margin="5dp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <ImageView
             android:layout_weight="1"
-            android:background="@drawable/wills"
-            android:id="@+id/wills_and_legacies"
-            android:layout_margin="5dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/financialplanning"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/financialplanning"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="Financial Planning"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/willslegacies"
+                android:textColor="@color/black"
+                android:id="@+id/willslegacies"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="Wills and Legacies"/>
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,20 +91,38 @@
         android:orientation="horizontal"
         android:weightSum="2"
         android:layout_height="match_parent">
-        <ImageView
-            android:layout_weight="1"
-            android:background="@drawable/elder"
-            android:layout_margin="5dp"
-            android:id="@+id/elder_abuse"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <ImageView
             android:layout_weight="1"
-            android:id="@+id/rights_and_enlightenments"
-            android:background="@drawable/rights"
-            android:layout_margin="5dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/elder_abuse"
+                android:textColor="@color/black"
+                android:id="@+id/elderabuse"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="Elder Abuse"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/rights_entitlements"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:id="@+id/rightsenlightenments"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="Rights and Enlightenments"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
 <!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"

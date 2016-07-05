@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Helpmeson</string>
+    <string name="app_name">HelpTab</string>
 
     <string-array name="cities_list">
         <item>Ahmedabad</item>

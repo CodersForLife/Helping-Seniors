@@ -114,31 +114,31 @@ public class clickDetailFragment extends Fragment {
 
         if(k==2){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,active);
-            img_path=R.drawable.active;
+            img_path=R.drawable.activeageing;
             getActivity().setTitle("Active Ageing");
         }
 
         if(k==3){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,fin);
-            img_path=R.drawable.fin;
+            img_path=R.drawable.financialplanning;
             getActivity().setTitle("Financial Planning");
         }
 
         if(k==4){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,wills);
-            img_path=R.drawable.wills;
+            img_path=R.drawable.willslegacies;
             getActivity().setTitle("Wills and Legacies");
         }
 
         if(k==5){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,elder);
-            img_path=R.drawable.elder;
+            img_path=R.drawable.elder_abuse;
             getActivity().setTitle("Elder Abuse");
         }
 
         if(k==6){
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,rights);
-            img_path=R.drawable.rights;
+            img_path=R.drawable.rights_entitlements;
             getActivity().setTitle("Rights and Entitlements");
         }
         listview_issue.setAdapter(adapter);

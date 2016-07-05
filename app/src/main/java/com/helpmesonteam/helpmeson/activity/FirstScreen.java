@@ -31,10 +31,13 @@ public class FirstScreen extends BaseActivity {
                     SharedPreferences preferences =getSharedPreferences("Pref",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean("first",true);
+                    editor.putBoolean("second",true);
+                    editor.putBoolean("third",true);
                     editor.putString("phone_number",number);
                     editor.apply();
                     editor.commit();
-                    Intent i=new Intent(getApplicationContext(),AddDetails.class);
+                  //  Intent i=new Intent(getApplicationContext(),AddDetails.class);
+                    Intent i=new Intent(getApplicationContext(),HomeActivity.class);
                     startActivity(i);
                     finish();
                 }
