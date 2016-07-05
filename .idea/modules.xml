@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Helpmeson.iml" filepath="$PROJECT_DIR$/Helpmeson.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonframework/commonframework.iml" filepath="$PROJECT_DIR$/commonframework/commonframework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/helpmeson.iml" filepath="$PROJECT_DIR$/helpmeson.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/theme/theme.iml" filepath="$PROJECT_DIR$/theme/theme.iml" />
     </modules>

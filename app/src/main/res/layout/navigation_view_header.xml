@@ -2,53 +2,29 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_marginTop="50dp"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:orientation="vertical">
+        android:layout_height="55dp"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/nav_header"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/profileImage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/logo" />
-
-            <TextView
-                android:id="@+id/userNameHeaderView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/profileImage"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:textColor="@color/white" />
-
-        </LinearLayout>
+        android:background="@color/colorPrimary"
+       >
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textStyle="bold"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="30dp"
+          android:textSize="20dp"
+          android:text="Helpmeson"/>
+         </RelativeLayout>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:background="#36000000" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/abt_hlp"
@@ -86,9 +62,9 @@
         android:paddingTop="12dp">
 
         <ImageView
-            android:layout_width="29dp"
+            android:layout_width="20dp"
             android:background="@drawable/citizenicon"
-            android:layout_height="29dp"/>
+            android:layout_height="20dp"/>
         <!--android:background="@android:drawable/"-->
 
 
@@ -96,7 +72,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="4dp"
             android:text="Senior Issues"
             android:textColor="#662E91" />
     </LinearLayout>
@@ -148,7 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:text="+9112033553"
+        android:text="+911204270411"
         android:textColor="#662E91" />
 </LinearLayout>
     <LinearLayout
