@@ -18,6 +18,7 @@ import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import com.android.helpmeson.R;
+import com.android.theme.activity.AVLoadingIndicatorView;
 import com.helpmesonteam.helpmeson.activity.AddDetails;
 import com.helpmesonteam.helpmeson.activity.InstaHelpDialogActivity;
 
@@ -38,7 +39,7 @@ public class HomeFragment extends Fragment {
 
     private WebView webview;
 
-    private ProgressDialog progressDialog;
+    private AVLoadingIndicatorView avLoadingIndicatorView;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -79,12 +80,8 @@ public class HomeFragment extends Fragment {
         View v= inflater.inflate(R.layout.fragment_home, container, false);
         add_help=(FloatingActionButton)v.findViewById(R.id.add_new_help);
         network_message=(TextView)v.findViewById(R.id.connection_msg);
-
+        avLoadingIndicatorView=(AVLoadingIndicatorView)v.findViewById(R.id.progressbar);
         webview = (WebView) v.findViewById(R.id.webView);
-        progressDialog=new ProgressDialog(getActivity());
-        progressDialog.setTitle("Loading");
-        progressDialog.setMessage("Please wait...");
-        progressDialog.setCancelable(false);
 
 
         
@@ -96,16 +93,15 @@ public class HomeFragment extends Fragment {
 
                @Override
                public void onPageStarted(WebView view, String url, Bitmap facIcon) {
-                   progressDialog.show();
+                   avLoadingIndicatorView.setVisibility(View.VISIBLE);
                    webview.setVisibility(View.GONE);
                }
 
                @Override
                public void onPageFinished(WebView view, String url) {
                    // hide element by class name
-
-                   webview.setVisibility(View.VISIBLE);
-                   progressDialog.dismiss();
+                    avLoadingIndicatorView.setVisibility(View.GONE);
+                    webview.setVisibility(View.VISIBLE);
 
                }
            });

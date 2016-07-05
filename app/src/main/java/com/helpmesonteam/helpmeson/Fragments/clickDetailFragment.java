@@ -92,18 +92,15 @@ public class clickDetailFragment extends Fragment {
         final String[] health={"Arithritis and Rheumatism",
                 "Constipation",
                 "Dementia","Dental Care","Diabetes","Eyecare","Heart Attacks and Strokes","HIV AIDS","Mental health",
-                "Osteoporosis","Parkinsons Disease","urinary Incontinence"};
+                "Osteoporosis","Parkinsons Disease","Urinary Incontinence"};
         final String[] active={"Dealing with Loneliness","Healthy Ageing","Laughing your way to Health","Nutrition for Healthy Ageing"};
-        final String[] fin={"Creating an Asset Register","Essential Information for the Spouse","reverse Mortgage","Safeguarding your Property",
+        final String[] fin={"Creating an Asset Register","Essential Information for the Spouse","Reverse Mortgage","Safeguarding your Property",
                 "Taxation and Elderly"};
         final String[] wills={"How to prepare your will"};
-        final String[] elder={"Eder Abuse"};
+        final String[] elder={"Elder Abuse"};
         final String[] rights={"Health Insurance schemes","Maintenance and Welfare of parents and Senior Citizens Act","Pension Schemes"};
-
-
         final int k=getArguments().getInt("image_clicked");
         ArrayAdapter<String> adapter = null;
-
         if(k==1)
         {
             adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.list_item,R.id.text_view,health);
