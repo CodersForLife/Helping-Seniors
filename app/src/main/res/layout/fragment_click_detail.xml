@@ -9,6 +9,7 @@
 
     <ImageView
         android:layout_width="match_parent"
+        android:scaleType="centerCrop"
         android:layout_height="match_parent"
         android:id="@+id/image_category_elder_issue"
         android:layout_weight="2"/>
