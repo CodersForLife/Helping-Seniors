@@ -19,9 +19,11 @@ public class FirstScreen extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        hideToolbar();
         setContentView(R.layout.activity_first_screen);
         mnumber=(EditText)findViewById(R.id.mnumber);
        // mnumber.setText();
+
         mnumber.append("+91");
 //        mnumber.moveCursorToVisibleOffset();
         mnumber.setOnEditorActionListener(new TextView.OnEditorActionListener() {
