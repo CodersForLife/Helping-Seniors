@@ -59,7 +59,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         rate= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.rate);
         senior= (LinearLayout) homeNavigationHeaderView.findViewById(R.id.senior_issue);
 
-
+        story.setVisibility(View.GONE);
 
         final SharedPreferences sp=getSharedPreferences("Pref",MODE_APPEND);
         Log.e("kk",sp.getBoolean("fourth",true)+"");
@@ -185,7 +185,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v == about){
-
+            Uri uriUrl = Uri.parse("http://www.Helpmeson.in");
+            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+            startActivity(launchBrowser);
         }
         else if(v == story){
 
