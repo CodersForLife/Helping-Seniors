@@ -157,10 +157,11 @@ public class HelpSelection extends BaseActivity implements View.OnClickListener 
             SharedPreferences preferences = getSharedPreferences("Pref", MODE_APPEND);
             requestParams.put("name",preferences.getString("name"," "));
             requestParams.put("age",preferences.getString("age"," "));
-            requestParams.put("state",preferences.getString("state","TEST"));
+            requestParams.put("state",preferences.getString("state",""));
             requestParams.put("city",preferences.getString("city"," "));
             requestParams.put("address",preferences.getString("address"," "));
             requestParams.put("reference_no",preferences.getString("reference_number"," "));
+            requestParams.put("contact_no",preferences.getString("phone_number"," "));
             requestParams.put("type_of_help",typeOfHelp);
 
             SharedPreferences.Editor editor = preferences.edit();

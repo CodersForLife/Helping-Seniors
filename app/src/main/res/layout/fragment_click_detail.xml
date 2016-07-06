@@ -1,23 +1,20 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:weightSum="3"
     tools:context="com.helpmesonteam.helpmeson.Fragments.clickDetailFragment">
 
     <ImageView
         android:layout_width="match_parent"
         android:scaleType="centerCrop"
-        android:layout_height="match_parent"
-        android:id="@+id/image_category_elder_issue"
-        android:layout_weight="2"/>
+        android:layout_height="200dp"
+        android:id="@+id/image_category_elder_issue"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@null"
         android:dividerHeight="5dp"
         android:id="@+id/list_of_elder_click_issues"
-        android:layout_weight="1"></ListView>
-</LinearLayout>
+        android:layout_weight="1"
+        android:layout_below="@+id/image_category_elder_issue"></ListView>
+</RelativeLayout>
