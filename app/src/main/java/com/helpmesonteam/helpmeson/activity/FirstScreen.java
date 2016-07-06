@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.helpmeson.R;
 import com.android.theme.activity.BaseActivity;
@@ -26,7 +27,7 @@ public class FirstScreen extends BaseActivity {
         mnumber.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                if (((event != null &&(event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) && mnumber.getText().toString().length()==13){
                     String number=mnumber.getText().toString();
                     SharedPreferences preferences =getSharedPreferences("Pref",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
@@ -41,6 +42,13 @@ public class FirstScreen extends BaseActivity {
                     startActivity(i);
                     finish();
                 }
+                else
+                   // Toast.makeText(FirstScreen.this,"Please enter correct mobile number",Toast.LENGTH_SHORT).show();
+                {
+                    mnumber.clearFocus();
+                    mnumber.setError("Please enter correct mobile number");
+                }
+
                 return false;
             }
         });

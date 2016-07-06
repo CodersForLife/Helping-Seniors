@@ -100,8 +100,18 @@ public class AddDetails extends BaseActivity {
                 add=address.getText().toString();
                 age = ageEditText.getText().toString();
 
+            if(rn.length()!=10 || rn.length()!=12)
+                rnumber.setError("Please enter a valid phone number");
 
-                if(n.length()>=1 && cty.length()>=1 && rn.length()>=1 && add.length()>=1)
+                if(age.length()>2 || age.length()==0)
+                    ageEditText.setError("Please enter a valid age");
+
+                if(add.length()==0)
+                address.setError("please enter a valid address");
+                if(n.length()==0)
+                    name.setError("Please enter a valid name");
+
+                if(n.length()>=1 && (rn.length()==10||rn.length()==12) && add.length()>=1 && age.length()<=2 && age.length()>=1)
                 {
                    // SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     SharedPreferences preferences =getSharedPreferences("Pref",MODE_APPEND);
@@ -118,9 +128,6 @@ public class AddDetails extends BaseActivity {
                     Intent intent=new Intent(getApplicationContext(),HelpSelection.class);
                     startActivity(intent);
                     finish();
-                }
-                else {
-                    Toast.makeText(getApplicationContext(),"You have left some fields empty",Toast.LENGTH_SHORT).show();
                 }
             }
         });

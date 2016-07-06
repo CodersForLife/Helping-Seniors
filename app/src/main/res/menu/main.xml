@@ -5,7 +5,8 @@
 
     <item
         android:id="@+id/sos"
-        android:title="SOS"
+        android:icon="@drawable/sos"
+        android:title="@null"
         app:showAsAction="always">
         <menu>
             <item
