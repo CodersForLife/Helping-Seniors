@@ -107,7 +107,7 @@ public class HomeFragment extends Fragment {
            });
 
 
-           webview.loadUrl("http://helpmeson.in/blog");
+           webview.loadUrl("https://www.seniorshelf.com/");
        }
 
         else {
